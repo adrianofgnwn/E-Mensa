@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Newsletter Anmeldung</title>
+</head>
+<body>
+<h1>Newsletter Anmeldung</h1>
+
+<!-- Zeige Fehlermeldungen -->
+<?php if (isset($error)): ?>
+<p style="color: red;"><?= htmlspecialchars($error) ?></p>
+<?php endif; ?>
+
+<form action="/newsletter_signup" method="POST">
+ <label for="namen">Name:</label>
+ <input type="text" id="namen" name="namen" value="<?= htmlspecialchars($_POST['namen'] ?? '') ?>" required>
+
+ <label for="emails">E-Mail:</label>
+ <input type="email" id="emails" name="emails" value="<?= htmlspecialchars($_POST['emails'] ?? '') ?>" required>
+
+ <label for="sprache">Sprache:</label>
+ <select id="sprache" name="sprache">
+ <option value="deutsch" <?= ($_POST['sprache'] ?? '') === 'deutsch' ? 'selected' : '' ?>>Deutsch</option>
+ <option value="englisch" <?= ($_POST['sprache'] ?? '') === 'englisch' ? 'selected' : '' ?>>Englisch</option>
+ </select>
+
+ <label>
+ <input type="checkbox" name="datenschutz" <?= isset($_POST['datenschutz']) ? 'checked' : '' ?>>
+ Datenschutzerklärung akzeptieren
+ </label>
+
+ <button type="submit">Anmelden</button>
+</form>
+</body>
+</html>
