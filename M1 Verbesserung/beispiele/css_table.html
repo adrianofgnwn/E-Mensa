@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--- Praktikum DBWT. Autoren:
+- Michael Xhristiano, Espranata, 3658655
+- Adriano Ferane, Gunawan, 3659313
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Übung</title>
+    <style>
+
+        body{
+            font-family: sans-serif;
+            line-height: 1.6;
+        }
+
+        h1{
+            font-size: 25px;
+        }
+        a{
+            color: burlywood;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+        table{
+            width :80%;
+            border-collapse: collapse;
+            margin-left: 80px;
+        }
+
+        th,td{
+            padding : 1px;
+            border: 1px solid #000000;
+
+        }
+
+        th{
+            background-color: #f4ede3;
+            font-weight: bold;
+            color:#333;
+            text-align: center;
+        }
+
+        td{
+            background-color: #fff
+        }
+
+        .extravagrant-row td{
+            background-color: #f4ede3;
+        }
+
+        td:nth-child(1), td:nth-child(2){
+            text-align: center;
+            vertical-align: middle;
+        }
+        td:nth-child(3) {
+            width: 75%;
+        }
+        ol {
+            margin: 10px;
+            padding-left: 20px;
+            line-height: 2em;
+        }
+
+        ol li {
+            margin-bottom: 5px;
+            font-weight: normal; /* Make list items non-bold */
+        }
+
+        .center {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-left: 500px;
+        }
+
+        footer ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+        footer ul li:not(:last-child)::after {
+            content: '|';
+            position: absolute;
+            right: -15px;
+            color: #d96524;
+        }
+        hr {
+            background-color: #f4ede3;
+            height: 2px;
+            border: none;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="elektro zeile">
+        <h1 id="elektro">Wofür steht das E in E-Mensa?</h1>
+        <p>Am besten zeigt man das in einer <a href="#etabelle">Tabelle</a>.</p>
+        <table id="etabelle">
+            <thead>
+            <tr>
+                <th>Bedeutung</th>
+                <th>Philosophie</th>
+                <th>Beispiele</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Elektro</td>
+                <td>Alles geht <br>
+                    elektronisch</td>
+                <td>
+                    <ol>
+                        <li class="pflicht">Bestellung digital</li>
+                        <li class="pflicht">Bezahlen digital</li>
+                        <li>Essen digital</li>
+                        <li>Spülen digital</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr class="extravagrant-row">
+                <td>Extravagant</td>
+                <td>Es gibt auch <br>
+                    Ausgefallenes</td>
+                <td><p>Wir sind die einzige Mensa weit und breit mit </p>
+                    <ol>
+                        <li class="pflicht">Vanillesauerkraut</li>
+                        <li class="pflicht">Bohnensenfbrot</li>
+                        <li>Habaneroeiscreme</li>
+                        <li>Bananengulasch</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>Effizient</td>
+                <td>Schnell, lecker und <br>
+                    qualitativ</td>
+                <td>
+                    <ol>
+                        <li class="pflicht">Frisch für Sie zubereitet, wann Sie es wollen</li>
+                        <li class="pflicht">Die Zutaten sind nachverfolgbar und immer <br>
+                            tiefgekühlt</li>
+                        <li>Wir haben auch Samstags geöffnet. Sie sehen, <br>
+                            wie effizient wir sind.</li>
+                    </ol>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="center">Da geht natürlich noch viel mehr, siehe nur <abbr title="Extra">E</abbr>.<br>Die Tabelle ist
+            aber schon ganz schön imposant so oder?</p>
+    </div>
+</main>
+<hr>
+<footer>
+    <ul>
+        <li>(c) DBWT</li>
+        <li>Hilfe</li>
+        <li>Datenschutz</li>
+        <li>Impressum</li>
+    </ul>
+</footer>
+</body>
+</html>

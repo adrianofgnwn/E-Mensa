@@ -1,0 +1,59 @@
+<!--
+- Praktikum DBWT. Autoren:
+- Adriano, Gunawan, 3659313
+- Michael, Esprenata, 3658655
+-->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletter Anmeldung</title>
+
+</head>
+<body>
+<h1>Anmeldung für Newsletter</h1>
+
+<form action="formdata.html" method="POST">
+    <fieldset style="width: 60px; border-radius: 5px" >
+        <legend>Anmeldung</legend>
+        <!-- Anrede -->
+        <p style="margin-bottom: 5px">Anrede</p>
+        <input type="radio" id="frau" name="anrede" value="Frau">
+        <label for="frau">Frau</label><br>
+        <input type="radio" id="herr" name="anrede" value="Herr">
+        <label for="herr">Herr</label><br>
+
+        <!-- Vorname -->
+        <label for="vorname">Vorname*</label><br>
+        <input type="text" id="vorname" name="vorname" placeholder="Bitte geben Sie Ihren Vornamen ein" required><br>
+
+        <!-- Nachname -->
+        <label for="nachname">Nachname*</label><br>
+        <input type="text" id="nachname" name="nachname" placeholder="Bitte geben Sie Ihren Nachnamen ein" required><br>
+
+        <!-- E-Mail -->
+        <label for="email">E-Mail*</label><br>
+        <input type="email" id="email" name="email" placeholder="Bitte geben Sie Ihre E-Mail ein" required><br>
+
+        <!-- Benachrichtigungsintervall -->
+        <label for="intervall">Benachrichtigungsintervall</label><br>
+        <select id="intervall" name="intervall">
+            <option value="tag">Tag</option>
+            <option value="woche" selected>Woche</option>
+            <option value="monat">Monat</option>
+        </select><br>
+
+        <!-- Datenschutzhinweise -->
+        <input type="checkbox" id="datenschutz" name="datenschutz" value="Gelesen" required>
+        <label for="datenschutz">Datenschutzhinweise gelesen*</label><br>
+
+        <!-- Absenden -->
+        <input type="submit" value="Abschicken" style="padding: 10px; margin-top: 5px; border-radius:5px; background-color: darkgrey">
+
+        <p><span class="required">*</span> Eingaben sind Pflicht</p>
+    </fieldset>
+</form>
+
+</body>
+</html>
