@@ -1,0 +1,78 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Center container */
+.center-container {
+    text-align: center;
+    width: 100%; /* Full width to allow centering */
+}
+
+/* Header styling */
+.center-container h1 {
+    font-size: 45px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Labels */
+form label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+/* Input fields */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message styling */
+p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+}
