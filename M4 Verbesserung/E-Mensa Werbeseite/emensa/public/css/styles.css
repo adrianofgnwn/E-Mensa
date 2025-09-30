@@ -1,0 +1,101 @@
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+}
+body {
+    font-family: "Comic Sans MS";
+}
+header {
+    display: grid;
+    grid-template-columns: 20% 60%;
+    border-bottom: 2px solid black;
+}
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+img {
+    max-width: 100%;
+}
+#menupic {
+    text-align: center;
+    margin-top: 10px;
+}
+header > ul {
+    font-size: 20px;
+    display: grid;
+    align-content: space-evenly;
+    border: solid black;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 10px;
+    list-style-type: none;
+}
+h1 {
+    font-weight: bold;
+    justify-items: left;
+}
+#text {
+    display: grid;
+    border: solid;
+    grid-template-rows: repeat(2, auto);
+    padding: 5px;
+    text-align: justify;
+}
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.Preis {
+    text-align: center;
+}
+#inzahlen {
+    font-weight: bold;
+    font-size: 25px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 30px auto 30px auto 30px auto;
+}
+#form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+#formname, #formaddress, #formlanguage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+#button {
+    font-weight: bold;
+    margin-left: 50%;
+}
+#mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Besuch {
+    text-align: center;
+}
+footer {
+    border-top: solid;
+}
+footer ul {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    list-style-type: none;
+    grid-template-columns: repeat(4, auto);
+}
+footer ul > li + li::before {
+    content: "|";
+    margin: 10px;
+}
