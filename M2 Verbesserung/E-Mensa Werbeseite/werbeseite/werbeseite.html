@@ -1,0 +1,248 @@
+<!--
+- Praktikum DBWT. Autoren:
+- Adriano, Gunawan, 3659313
+- Michael, Esprenata, 3658655
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>E-mensa</title>
+    <style>
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: blue;
+        }
+        body{
+            font-family: "Comic Sans MS";
+        }
+        header{
+            display: grid;
+            grid-template-columns: 20% 60%;
+            border-bottom: 2px solid black;
+        }
+        main {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        img{
+            max-width: 100%;
+        }
+        #menupic{
+            text-align: center;
+            margin-top: 10px;
+        }
+        header>ul{
+            font-size: 20px;
+            display:grid;
+            align-content: space-evenly;
+            border: solid black;
+            grid-template-columns: repeat(5,auto);
+            column-gap: 10px;
+            list-style-type: none;
+        }
+        h1 {
+            font-weight: bold;
+            justify-items: left;
+        }
+        #text{
+            display: grid;
+            border:solid;
+            grid-template-rows: repeat(2,auto);
+            padding:5px;
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+        }
+        table,th, td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        tr:nth-child(2){
+            border-bottom-color:grey;
+        }
+        .Preis{
+            text-align: center;
+        }
+        #inzahlen{
+            font-weight:bold;
+            font-size: 25px;
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: 30px auto 30px auto 30px auto;
+        }
+        #form{
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            gap: 5px;
+        }
+        #formname{
+            display:flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            gap: 5px;
+        }
+        #formaddress{
+            display:flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            gap: 5px;
+        }
+        #formlanguage{
+            display:flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            gap: 5px;
+        }
+        #button{
+            font-weight: bold;
+            margin-left:50%;
+        }
+        #mid{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #Besuch{
+            text-align:center;
+        }
+        footer{
+            border-top:solid;
+        }
+        footer ul{
+            display:grid;
+            justify-items:center;
+            justify-content: center;
+            list-style-type:none;
+            grid-template-columns: repeat(4,auto);
+        }
+        footer ul>li+li::before{
+            content: "|";
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="E-Mensa%20Logo.png" alt="E-Mensa Logo">
+    <ul>
+        <li><a href="#Ankündigung">Ankündigung</a></li>
+        <li><a href="#Speisen">Speisen</a></li>
+        <li><a href="#Zahlen">Zahlen</a></li>
+        <li><a href="#Kontakt"> Kontakt</a></li>
+        <li><a href="#Wichtig">Wichtig für uns</a></li>
+    </ul>
+</header>
+<main>
+    <div id="menupic">
+        <img src="RINDFLEISCH.jpg" alt="Rindfleisch Gerichte">
+    </div>
+    <h1 id="Ankündigung">Bald gibt es Essen auch online;)</h1>
+    <div id="text">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id mollis magna.
+            Curabitur sagittis arcu nisi. Proin ut erat enim. Donec molestie at quam eget egestas.
+            Nullam pulvinar malesuada risus nec ultricies. Duis lectus est, bibendum non vulputate in,
+            varius id metus. Duis scelerisque a massa non cursus. Nulla sapien lorem, vehicula nec pharetra non,
+            sagittis eget odio. Curabitur quam magna, feugiat ac dignissim vitae, porttitor ut leo. Integer quis ipsum
+            id urna tristique luctus id ut leo. Aenean vel dui est. Duis id erat eros.<br>
+            Mauris facilisis dui a nibh dictum, vel pharetra nibh dictum. Pellentesque libero nisl, suscipit sit amet leo a,
+            egestas molestie dolor. Donec sit amet aliquam felis, vitae convallis libero. Donec sed iaculis augue. Maecenas
+            at ipsum vel turpis vestibulum aliquam. Fusce eget eros eget nibh luctus ultrices eu tristique dolor. Vivamus
+            velit justo, volutpat id consequat id, auctor sit amet ante. Nullam lacinia dui sem, et viverra quam sagittis at.
+            Nulla sem eros, sagittis vel lorem vel, gravida placerat odio. In fringilla sem ut neque rhoncus, vel tristique
+            sapien pulvinar. Nunc non elit eu quam pellentesque tincidunt. Cras massa lorem, ullamcorper nec augue malesuada,
+            aliquam aliquet eros. Nulla facilisi. Donec aliquam lobortis sem, lacinia vestibulum massa. Maecenas lacinia dictum
+            leo, eget feugiat eros sagittis eget.</p>
+    </div>
+    <h1 id="Speisen">Köstlichkeiten, die Sie erwarten</h1>
+    <table>
+        <tr>
+            <th rowspan="1"></th>
+            <th>Preis intern</th>
+            <th>Preis extern</th>
+        </tr>
+        <tr>
+            <td>Rindfleisch mit Bambus, Kaiserschoten und Rotem Paprika, dazu Mie nudeln</td>
+            <td class="Preis">3,50 &euro;</td>
+            <td class="Preis">6,20 &euro;</td>
+        </tr>
+        <tr>
+            <td>Spinatrisotto mit kleinen Samosateigecken und gemischter Salat</td>
+            <td class="Preis">2,90 &euro;</td>
+            <td class="Preis">5,30 &euro;</td>
+        </tr>
+        <tr>
+            <td class="Preis">...</td>
+            <td class="Preis">...</td>
+            <td class="Preis">...</td>
+        </tr>
+    </table>
+    <h1 id="Zahlen">E-mensa in Zahlen</h1>
+    <ul id="inzahlen">
+        <li>X</li>
+        <li>Besuche</li>
+        <li>Y</li>
+        <li>Anmeldungen zum Newsletter</li>
+        <li>Z</li>
+        <Li>Speisen</Li>
+    </ul>
+
+    <h1 id="Kontakt">Interesse geweckt? Wir informieren Sie!</h1>
+    <form action="/werbeseite/formdata.html" method="post">
+
+        <div id="form">
+
+            <div id="formname">
+                <label for="namen">Ihr Name</label>
+                <input type="text" id="namen" name="namen" placeholder="Vorname" required>
+            </div>
+
+            <div id="formaddress">
+                <label for="email">Ihr E-mail</label>
+                <input type="email" id="email" name="emails" required>
+            </div>
+
+            <div id="formlanguage">
+                <label for="newsletter">Newsletter bitte in</label>
+                <select id="newsletter" name="sprache">
+                    <option value="deutsch" selected>Deutsch</option>
+                    <option value="englisch" >Englisch</option>
+                </select><br>
+            </div>
+        </div>
+
+        <input type="checkbox" required id="checkbox">
+        <label for="checkbox">Den Datenschutzbestimmungen stimme ich zu</label>
+        <input type="submit" value="Zum Newsletter anmelden" id="button">
+
+    </form>
+
+    <h1 id="Wichtig">Das ist uns Wichtig</h1>
+    <div id="mid">
+        <ul>
+            <li>Beste frische saisonale Zutaten</li>
+            <li>Ausgewogene abwechslungsreiche Gerichte</li>
+            <li>Sauberkeit</li>
+        </ul>
+    </div>
+
+    <h1 id="Besuch">Wir freuen uns auf Ihren Besuch!</h1>
+</main>
+<footer>
+    <ul>
+        <li>(c) E-Mensa GmbH</li>
+        <li>Adriano F. Gunawan & Michael X. Esprenata</li>
+        <li><a href="index.html">Impressum</a></li>
+    </ul>
+</footer>
+</body>
+</html>
