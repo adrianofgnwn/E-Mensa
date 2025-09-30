@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--- Praktikum DBWT. Autoren:
+- Michael Xhristiano, Espranata, 3658655
+- Adriano Ferane, Gunawan, 3659313
+-->
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layouts</title>
+
+  <style>
+    /* Style for the grid container */
+    .grid-container{
+      display: grid;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Grid for three elements stacked vertically */
+    #grid-vertical{
+      grid-template-columns: 1fr;
+    }
+
+    /* Grid for three elements side by side with the middle one centered */
+    #grid-horizontal{
+      grid-template-columns: 1fr auto 1fr;
+    }
+    /* Grid for one centered element */
+    #grid-centered{
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    /* Common styles for grid items */
+    .grid-item{
+      background-color: mediumturquoise;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- 1) Three elements stacked vertically -->
+<div class="grid-container" id="grid-vertical">
+  <div class="grid-item">Element1 </div>
+  <div class="grid-item">Element2 </div>
+  <div class="grid-item">Element3 </div>
+</div>
+
+<!-- 2) Three elements side by side, middle one centered -->
+<div class="grid-container" id="grid-horizontal">
+  <div class="grid-item">links</div>
+  <div class="grid-item">mitte </div>
+  <div class="grid-item">recths </div>
+</div>
+
+<!-- 3) One centered element -->
+<div class="grid-container" id="grid-centered">
+  <div class="grid-item">Zentral Element </div>
+</div>
+
+</body>
+</html>
