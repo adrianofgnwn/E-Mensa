@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--- Praktikum DBWT. Autoren:
+- Michael Xhristiano, Espranata, 3658655
+- Adriano Ferane, Gunawan, 3659313
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anmeldung</title>
+    <style>
+        form {
+            border: 1px solid #000;
+            padding: 20px;
+            width: 300px;
+            font-family: Arial, sans-serif;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: gray;
+        }
+        .required {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1> Anmeldung </h1>
+
+<form action= "newsletter_signup.php" method="POST">
+" method="POST">
+    <label> Anrede </label>
+    <input type="radio" id="Frau" name="anrede" value="Frau"> Frau
+    <input type="radio" id="Herr" name="anrede" value="Herr"> Herr
+
+    <label for="vorname">Vorname<span class="required">*</span></label>
+    <input type="text" id="vorname" name="vorname" placeholder="Bitte geben sie Ihre Vornamen ein" required>
+
+    <label for="nachname">Nachname<span class="required">*</span></label>
+    <input type="text" id="nachname" name="nachname" placeholder="Bitte geben sie Ihre Nachnamen ein" required>
+
+    <label for="email">E-mail<span class="required">*</span></label>
+    <input type="text" id="email" name="email" placeholder="Bitte geben sie Ihre E-mail ein" required>
+
+    <label for="intervall">Benachrichtigungsintervall</label>
+    <select id="intervall" name="interval">
+        <option value="tag">Tag</option>
+        <option value="woche">Woche</option>
+        <option value="monat">Monat</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="datenschutz" name="datenschutz" required>
+        Datenschutzhinweise gelesen<span class="required">*</span>
+    </label>
+
+    <input type="submit" value="Abschicken">
+
+    <p><span class="required">*</span> Eingaben sind Pflicht</p>
+</form> <!-- Make sure form is closed here! -->
+
+</body>
+</html>

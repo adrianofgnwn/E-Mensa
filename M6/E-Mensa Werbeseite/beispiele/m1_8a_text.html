@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--- Praktikum DBWT. Autoren:
+- Michael Xhristiano, Espranata, 3658655
+- Adriano Ferane, Gunawan, 3659313
+-->
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currywurst mit Pommes</title>
+  <style>
+    h1 {
+      font-size: 48px;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-bottom: 1px; /* Adjust spacing between h1 and h3 */
+      border-bottom: 1px solid black; /* Add line below h1 */
+    }
+
+    h3.untertitel {
+      font-family: sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      margin-top: 2px;
+    }
+
+    ul.haupt {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul.haupt li {
+      font-size: 1.2em;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    ul.haupt li.beilage::before {
+      color: green;
+    }
+
+    ul.haupt li::before {
+      content: '•';
+      color: black;
+      margin-right: 8px;
+      margin-left: 40px;
+    }
+
+    ul.haupt li.beilage {
+      color: green; /* Text color for "Fritten" */
+    }
+  </style>
+</head>
+
+<body>
+<h1>Currywurst mit Pommes</h1>
+<h3 class="untertitel">Der Klassiker</h3>
+<ul class="haupt">
+  <li>Bratwurst</li>
+  <li class="beilage">Fritten</li>
+  <li>Currysauce</li>
+</ul>
+</body>
+</html>

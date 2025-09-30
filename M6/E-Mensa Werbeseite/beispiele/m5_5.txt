@@ -1,0 +1,40 @@
+
+Explanation of Proposed Stored Procedures for the E-Mensa Project
+
+1. Procedure for Tracking Failed Login Attempts
+
+In many web applications, security is a key concern, especially when it comes to user authentication. A common method for preventing unauthorized access is to track failed login attempts. I propose creating a stored procedure named track_failed_login_attempts that would increment a user's failed login count in the benutzer table each time a login attempt fails.
+
+Purpose:
+This procedure will update the anzahlfehler field (the failed login attempt counter) for a specific user. By centralizing this logic in the database, we ensure consistent tracking of login failures regardless of where the logic is executed in the application. Additionally, this procedure would enable us to easily implement account locking features, such as temporarily locking a user's account after a predefined number of failed login attempts.
+
+
+DELIMITER $$
+
+CREATE PROCEDURE track_failed_login_attempts(IN user_id INT)
+BEGIN
+    UPDATE benutzer
+    SET anzahlfehler = anzahlfehler + 1
+    WHERE id = user_id;
+END $$
+
+DELIMITER ;
+2. Procedure for Resetting a User's Password
+
+Purpose:
+This procedure would update the passwort field for a specific user in the benutzer table, hashing the new password before storing it. It would also update the letztepasswortaenderung field to indicate when the password was last changed. The password would be hashed using a salt to ensure security.
+
+Example SQL code:
+
+DELIMITER $$
+
+CREATE PROCEDURE reset_user_password(IN user_id INT, IN new_password_hash VARCHAR(255))
+BEGIN
+    UPDATE benutzer
+    SET passwort = new_password_hash, letztepasswortaenderung = NOW()
+    WHERE id = user_id;
+END $$
+
+DELIMITER ;
+
+

@@ -1,0 +1,18 @@
+[
+    {
+        "anrede": null,
+        "vorname": "Michael Xhristiano",
+        "nachname": "Espranata",
+        "email": "michael.limanx@gmail.com",
+        "intervall": "tag",
+        "privacy": true
+    },
+    {
+        "anrede": "Herr",
+        "vorname": "Michael Xhristiano",
+        "nachname": "Espranata",
+        "email": "michael.limanx@gmail.com",
+        "intervall": "tag",
+        "privacy": true
+    }
+]
