@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Abmeldung</title>
+ <link rel="stylesheet" href="/css/loggedout.css">
+ <link rel="stylesheet" href="/path/to/your/styles.css"> <!-- Adjust the path to your CSS file -->
+</head>
+<body>
+<header>
+ <nav>
+ <ul>
+ <li><a href="/">Home</a></li>
+ <li><a href="/anmeldung">Login</a></li>
+ </ul>
+ </nav>
+</header>
+
+<main>
+ <div class="container">
+ <h1>Erfolgreich abgemeldet!</h1>
+ <p>Sie wurden erfolgreich abgemeldet. Sie können sich wieder einloggen, wenn Sie möchten.</p>
+
+ <p>Sie werden in Kürze zur <a href="/">Startseite</a> weitergeleitet.</p>
+
+ <p>Falls die Weiterleitung nicht automatisch erfolgt, klicken Sie bitte auf den Link.</p>
+ </div>
+</main>
+
+<footer>
+ <p>(c) E-Mensa GmbH</p>
+</footer>
+
+<!-- Optional: Auto-redirect after a few seconds -->
+<script>
+ setTimeout(function() {
+ window.location.href = '/'; // Redirect to the homepage after 5 seconds
+ }, 5000); // 5000 milliseconds = 5 seconds
+</script>
+</body>
+</html>
