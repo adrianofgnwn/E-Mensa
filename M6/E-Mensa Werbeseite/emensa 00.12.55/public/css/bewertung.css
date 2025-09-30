@@ -1,0 +1,40 @@
+/* Default styles (for large screens) */
+form div {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between label and input */
+    margin-bottom: 15px; /* Add spacing between rows */
+}
+
+form label {
+    flex: 0 0 150px; /* Fixed width for labels */
+    text-align: right; /* Align text to the right */
+}
+
+form textarea,
+form select,
+form input {
+    flex: 1; /* Inputs grow to fill remaining space */
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Responsive styles (for small screens) */
+@media (max-width: 600px) {
+    form div {
+        flex-direction: column; /* Stack labels and inputs */
+        align-items: stretch; /* Make inputs full width */
+    }
+
+    form label {
+        flex: 0; /* Remove fixed width */
+        text-align: left; /* Align text to the left */
+        margin-bottom: 5px; /* Add spacing below labels */
+    }
+
+    form textarea,
+    form select,
+    form input {
+        width: 100%; /* Make inputs full width */
+    }
+}

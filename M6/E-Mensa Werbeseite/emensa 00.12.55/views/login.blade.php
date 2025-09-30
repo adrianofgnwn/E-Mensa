@@ -1,0 +1,31 @@
+<!-- login.blade.php -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<<div class="center-container">
+    <h1>Login</h1>
+
+    <!-- Display error message if login failed -->
+    @if (!empty($loginError))
+        <p style="color: red;">{{ $loginError }}</p>
+    @endif
+
+        <!-- Login form -->
+    <form action="/anmeldung_verfizieren" method="POST">
+        <label for="email">E-Mail:</label>
+        <input type="email" name="email" placeholder="E-Mail" required>
+
+        <label for="password">Passwort:</label>
+        <input type="password" name="password" placeholder="Passwort" required>
+
+        <button type="submit">Anmelden</button>
+    </form>
+</div>
+</body>
+</html>

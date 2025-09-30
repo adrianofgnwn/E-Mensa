@@ -1,0 +1,18 @@
+/* highlighted review style */
+.highlighted-review {
+    background-color: #fff3cd; /* Light yellow background for highlighted reviews */
+    border: 2px solid #ffeeba; /* Soft border */
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+.highlighted-review strong {
+    color: #856404; /* Darker text color for highlighted review name */
+    font-weight: bold;
+}
+
+.highlighted-review img {
+    border: 2px solid #ffeeba; /* Border for the image */
+    border-radius: 5px;
+}

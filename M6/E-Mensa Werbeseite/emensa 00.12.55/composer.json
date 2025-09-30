@@ -1,0 +1,10 @@
+{
+    "name": "emensa/mvc",
+    "description": "routing script for module Datenbanken und Webtechnologien MVC",
+    "license": "proprietary",
+    "require": {
+        "eftec/bladeone": "^4.1",
+        "ext-mysqli": "*",
+        "monolog/monolog": "^3.0"
+    }
+}
